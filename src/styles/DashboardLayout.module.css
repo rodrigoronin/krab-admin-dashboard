@@ -1,3 +1,17 @@
 .container {
   background-color: #3d3d3d;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+
+  grid-template-areas:
+    "sidebar-left header sidebar-right"
+    "sidebar-left header sidebar-right"
+    "sidebar-left main sidebar-right";
+
+  height: 100vh;
+}
+
+.container__main {
+  grid-area: main;
 }
