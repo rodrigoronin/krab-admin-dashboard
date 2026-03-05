@@ -1,13 +1,15 @@
 import { Routes, Route } from "react-router";
-import DashboardLayout from "@layout/DashboardLayout";
-import Overview from "@components/ui/Overview";
+import DashboardLayout from "@layouts/DashboardLayout";
+import Overview from "@routes/Overview";
+import Products from "@routes/Products";
 
 function App() {
   return (
     <Routes>
-      <DashboardLayout>
+      <Route element={<DashboardLayout />}>
         <Route path="/" element={<Overview />}></Route>
-      </DashboardLayout>
+        <Route path="/products" element={<Products />}></Route>
+      </Route>
     </Routes>
   );
 }

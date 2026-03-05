@@ -32,6 +32,9 @@
       "@layouts/*": [
         "src/app/layouts/*"
       ],
+      "@routes/*": [
+        "src/app/routes/*"
+      ],
       "@components/*": [
         "src/components/*",
       ],
