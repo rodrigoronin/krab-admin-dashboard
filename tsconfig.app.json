@@ -29,8 +29,8 @@
     "noUncheckedSideEffectImports": true,
     "baseUrl": ".",
     "paths": {
-      "@layout/*": [
-        "src/app/layout/*"
+      "@layouts/*": [
+        "src/app/layouts/*"
       ],
       "@components/*": [
         "src/components/*",
