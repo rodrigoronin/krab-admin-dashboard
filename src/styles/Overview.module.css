@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "metric metric metric metric"
+    "chart-xs chart-xs chart-xs chart-sm"
+    "chart-md chart-md chart-md chart-md";
+  padding: 1rem 2rem;
+}
+
+.chart-xs {
+  grid-area: chart-xs;
+}
+.chart-sm {
+  grid-area: chart-sm;
+}
+.chart-md {
+  grid-area: chart-md;
+
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 1rem;
+}
