@@ -1,3 +1,5 @@
+import MetricChart from "@components/charts/MetricChart";
+import SplineChart from "@components/charts/SplineChart";
 import Card from "@components/ui/Card";
 
 import style from "@styles/Overview.module.css";
@@ -7,28 +9,12 @@ import style from "@styles/Overview.module.css";
 const Overview = () => {
   return (
     <div className={style.container}>
-      <Card>
-        <h2>Views</h2>
-        <span>2500</span>
-      </Card>
-      <Card className={`${style["metric"]}`}>
-        <h2>Visits</h2>
-        <span>3280</span>
-      </Card>
-      <Card className={`${style["metric"]}`}>
-        <h2>New Users</h2>
-        <span>189</span>
-      </Card>
-      <Card>
-        <h2>Active Users</h2>
-        <span>999</span>
-      </Card>
+      <MetricChart title="Views" value="2505" />
+      <MetricChart title="Visits" value="3435" />
+      <MetricChart title="New Users" value="231" />
+      <MetricChart title="Active Users" value="1102" />
 
-      <Card className={`${style["chart-xs"]}`}>
-        <span>Total Users</span>
-        <span>Total Products</span>
-        <span>Total Sales</span>
-      </Card>
+      <SplineChart className={`${style["chart-xs"]}`} />
 
       <Card className={`${style["chart-sm"]}`}>
         <span>Traffic by Website</span>

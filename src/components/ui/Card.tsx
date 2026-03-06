@@ -1,12 +1,15 @@
 import style from "@styles/Card.module.css";
 
-interface IProps {
-  children: React.ReactNode;
-  className?: string;
-}
+// This component will accept any properties that a <div> element can have
+// it also makes children implicit.
+type CardProps = React.HTMLAttributes<HTMLDivElement>;
 
-const Card = ({ children, className }: IProps) => {
-  return <div className={`${style.card} ${className ?? ""}`}>{children}</div>;
+const Card = ({ children, className, ...rest }: CardProps) => {
+  return (
+    <div className={`${style.card} ${className ?? ""}`} {...rest}>
+      {children}
+    </div>
+  );
 };
 
 export default Card;
