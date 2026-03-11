@@ -1,10 +1,10 @@
-import { Area, AreaChart, Legend, Line, LineChart, XAxis, YAxis } from "recharts";
+import { Area, AreaChart, Legend, Line, XAxis, YAxis } from "recharts";
 import Card from "@components/ui/Card";
 
 import style from "@styles/SplineChart.module.css";
 
 interface SplineChartProps {
-  className: string;
+  className?: string;
 }
 
 // #region mock data
