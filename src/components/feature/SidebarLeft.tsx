@@ -1,16 +1,23 @@
 import style from "@styles/SidebarLeft.module.css";
 
-// TODO: implement NavItem component
+type NavItemType = {
+  label: string;
+  path: string;
+};
+
 type NavSection = {
+  id: string;
   title?: string;
-  items: NavItem[];
+  items: NavItemType[];
 };
 
 const sections: NavSection[] = [
   {
+    id: "0",
     items: [{ label: "Overview", path: "/" }],
   },
   {
+    id: "1",
     title: "Dashboards",
     items: [
       { label: "Overview", path: "/" },
@@ -18,6 +25,7 @@ const sections: NavSection[] = [
     ],
   },
   {
+    id: "2",
     title: "Pages",
     items: [
       { label: "User Profile", path: "/profile" },
@@ -26,18 +34,32 @@ const sections: NavSection[] = [
   },
 ];
 
+type NavItemProps = {
+  item: NavItemType;
+};
+
+const NavItem = ({ item }: NavItemProps) => {
+  return (
+    <>
+      <a>{item.label}</a>
+    </>
+  );
+};
+
 const SidebarLeft = () => {
   return (
     <aside className={style.sidebar}>
-      {sections.map((section) => (
-        <div key={section.title} className={style.section}>
-          {section.title && <span className={section.title}>{section.title}</span>}
+      <nav>
+        {sections.map((section, i) => (
+          <div key={i} className={style.section}>
+            {section.title && <span className={style.sectionTitle}>{section.title}</span>}
 
-          {section.items.map((item) => (
-            <NavItem key={item.path} item={item} />
-          ))}
-        </div>
-      ))}
+            {section.items.map((item) => (
+              <NavItem key={item.path} item={item} />
+            ))}
+          </div>
+        ))}
+      </nav>
     </aside>
   );
 };
