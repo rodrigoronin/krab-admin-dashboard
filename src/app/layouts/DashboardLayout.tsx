@@ -1,6 +1,6 @@
-import SidebarLeft from "@components/feature/SidebarLeft";
+import SidebarLeft from "@components/feature/sidebar/SidebarLeft";
 import Header from "@components/ui/Header";
-import SidebarRight from "@components/feature/SidebarRight";
+import SidebarRight from "@components/feature/sidebar/SidebarRight";
 import { Outlet } from "react-router";
 
 import style from "@styles/DashboardLayout.module.css";
