@@ -1,3 +1,4 @@
+import SidebarHeader from "./SidebarHeader";
 import NavItem from "./NavItem";
 import type { NavItemType } from "./sidebar.types";
 
@@ -36,7 +37,7 @@ const sections: NavSection[] = [
 const SidebarLeft = () => {
   return (
     <aside className={style.sidebar}>
-      {/* SIDEBAR HEADER COMPONENT HERE */}
+      <SidebarHeader />
 
       <nav>
         {sections.map((section, i) => (
