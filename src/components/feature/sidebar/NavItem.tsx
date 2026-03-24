@@ -9,11 +9,11 @@ type NavItemProps = {
 };
 
 const NavItem = ({ item }: NavItemProps) => {
-  const Icon: IconType = item.icon;
+  const Icon = item.icon;
 
   return (
     <div className={style.link}>
-      {item.icon && <Icon size={18} className={style["link-icon"]} />}
+      {Icon && <Icon size={18} className={style["link-icon"]} />}
 
       <NavLink
         to={item.path}
