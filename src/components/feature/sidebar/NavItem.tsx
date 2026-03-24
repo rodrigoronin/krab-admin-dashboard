@@ -1,4 +1,3 @@
-import type { IconType } from "react-icons";
 import { NavLink } from "react-router";
 import type { NavItemType } from "./sidebar.types";
 
@@ -12,16 +11,18 @@ const NavItem = ({ item }: NavItemProps) => {
   const Icon = item.icon;
 
   return (
-    <div className={style.link}>
-      {Icon && <Icon size={18} className={style["link-icon"]} />}
-
-      <NavLink
-        to={item.path}
-        className={({ isActive }) => `${isActive ? "active" : ""} ${style["link-title"]}`}
-      >
+    <NavLink
+      to={item.path}
+      end
+      className={({ isActive }) =>
+        `${style["link-title"]} ${isActive ? style["link-title_active"] : ""} `
+      }
+    >
+      <div className={style.link}>
+        {Icon && <Icon size={18} className={style["link-icon"]} />}
         {item.label}
-      </NavLink>
-    </div>
+      </div>
+    </NavLink>
   );
 };
 
