@@ -1,3 +1,4 @@
+import { FaChartPie } from "react-icons/fa";
 import SidebarHeader from "./SidebarHeader";
 import NavItem from "./NavItem";
 import type { NavItemType } from "./sidebar.types";
@@ -20,7 +21,7 @@ const sections: NavSection[] = [
     id: "1",
     title: "Dashboards",
     items: [
-      { label: "Overview", path: "/" },
+      { label: "Overview", path: "/", icon: FaChartPie },
       { label: "Posts", path: "/posts" },
     ],
   },
