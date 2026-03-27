@@ -1,6 +1,6 @@
-import SidebarLeft from "@components/feature/SidebarLeft";
-import Header from "@components/ui/Header";
-import SidebarRight from "@components/feature/SidebarRight";
+import SidebarLeft from "@components/feature/sidebar-left/SidebarLeft";
+import MainHeader from "@components/feature/main-header/MainHeader";
+import SidebarRight from "@components/feature/sidebar-right/SidebarRight";
 import { Outlet } from "react-router";
 
 import style from "@styles/DashboardLayout.module.css";
@@ -11,9 +11,9 @@ const DashboardLayout = () => {
       <SidebarLeft />
 
       <div className={style.content}>
-        <Header />
+        <MainHeader />
 
-        <main className={style.container__main}>
+        <main className={style["container-main"]}>
           <Outlet />
         </main>
       </div>

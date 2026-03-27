@@ -4,8 +4,6 @@ import Card from "@components/ui/Card";
 
 import style from "@styles/Overview.module.css";
 
-// TODO: extract structure from here and create specialized components
-
 const Overview = () => {
   return (
     <div className={style.container}>

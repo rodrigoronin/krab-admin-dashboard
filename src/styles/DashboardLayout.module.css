@@ -1,5 +1,5 @@
 .container {
-  background-color: #3d3d3d;
+  background-color: #fff;
 
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
@@ -12,6 +12,6 @@
   height: 100vh;
 }
 
-.container__main {
+.container-main {
   grid-area: main;
 }

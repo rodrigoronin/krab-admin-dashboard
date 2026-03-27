@@ -1,0 +1,18 @@
+.link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.link-title {
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.link-title_active {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+}
