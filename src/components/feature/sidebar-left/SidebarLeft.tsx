@@ -15,7 +15,7 @@ import SidebarHeader from "./SidebarHeader";
 import NavItem from "./NavItem";
 import type { NavItemType } from "./sidebar.types";
 
-import style from "@styles/SidebarLeft.module.css";
+import style from "./SidebarLeft.module.css";
 
 type NavSection = {
   id: string;
@@ -83,8 +83,6 @@ const SidebarLeft = () => {
           </div>
         ))}
       </nav>
-
-      <div className={style.brand}>snowUI</div>
     </aside>
   );
 };

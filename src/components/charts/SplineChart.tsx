@@ -75,26 +75,26 @@ const data = [
 const SplineChart = ({ className }: SplineChartProps) => {
   return (
     <Card className={`${className} ${style.card}`}>
-      <div className={style.topbar}>
-        <div className={style.tabs}>
-          <span className={`${style.chart} ${style["chart-active"]}`}>Total Users</span>
-          <span className={style.chart}>Total Projects</span>
-          <span className={style.chart}>Operating Status</span>
-        </div>
+      <div className={style.tabs}>
+        <span className={`${style.chart} ${style["chart-active"]}`}>Total Users</span>
+        <span className={style.chart}>Total Projects</span>
+        <span className={style.chart}>Operating Status</span>
       </div>
 
       <AreaChart
         title="Total Users"
         style={{
           width: "100%",
-          aspectRatio: 1.6,
+          aspectRatio: 2,
+          fontSize: '0.75rem',
+          top: '-12px'
         }}
         responsive
         data={data}
         margin={{
-          top: 30,
+          top: 60,
           right: 7,
-          bottom: 32,
+          bottom: 8,
           left: 0,
         }}
       >
