@@ -75,9 +75,13 @@ const data = [
 const SplineChart = ({ className }: SplineChartProps) => {
   return (
     <Card className={`${className} ${style.card}`}>
-      <span className={`${style.chart} ${style["chart-active"]}`}>Total Users</span>
-      <span className={`${style.chart}`}>Total Visits</span>
-      <span className={`${style.chart}`}>Total Sales</span>
+      <div className={style.topbar}>
+        <div className={style.tabs}>
+          <span className={`${style.chart} ${style["chart-active"]}`}>Total Users</span>
+          <span className={style.chart}>Total Projects</span>
+          <span className={style.chart}>Operating Status</span>
+        </div>
+      </div>
 
       <AreaChart
         title="Total Users"
@@ -146,7 +150,7 @@ const SplineChart = ({ className }: SplineChartProps) => {
           strokeDasharray="4 4"
         />
 
-        <Legend verticalAlign="top" align="right" />
+        <Legend verticalAlign="top" align="right" iconType="circle" wrapperStyle={{ top: 0 }} />
       </AreaChart>
     </Card>
   );

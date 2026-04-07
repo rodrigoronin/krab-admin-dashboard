@@ -6,7 +6,10 @@ const SidebarHeader = () => {
     <div className={style["header"]}>
       <img className={style["header-logo"]} src={logo} alt="Logo" />
 
-      <span>Kraby Admin Dashboard</span>
+      <div className={style["header-text"]}>
+        <span className={style["header-text_title"]}>Kraby</span>
+        <span className={style["header-text_subtitle"]}>Admin Dashboard</span>
+      </div>
     </div>
   );
 };

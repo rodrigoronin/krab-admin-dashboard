@@ -1,7 +1,91 @@
 .header {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 1.75rem;
+  padding: 0.5rem 1.25rem;
+  border-bottom: 1px solid #eef0f3;
+  background: #fff;
+  grid-area: header;
+}
+
+.breadcrumbs,
+.actions,
+.toolbar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs {
+  gap: 0.8rem;
+}
+
+.actions {
+  gap: 1rem;
+}
+
+.crumb,
+.separator {
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+.crumb-current {
+  color: #111827;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: #f7f8fa;
+  color: #9ca3af;
+  width: 12rem;
+}
+
+.search input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  width: 100%;
+  color: #111827;
+}
+
+.search-shortcut {
+  font-size: 0.75rem;
+  color: #c0c4cc;
+  padding: 0.1rem 0.35rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+}
+
+.toolbar-icons {
+  gap: 0.25rem;
+}
+
+.icon-button {
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+@media (max-width: 920px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: space-between;
+  }
 }

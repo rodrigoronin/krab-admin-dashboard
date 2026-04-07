@@ -1,6 +1,5 @@
 .container {
   background-color: #fff;
-
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
 
@@ -8,10 +7,9 @@
     "sidebar-left header sidebar-right"
     "sidebar-left header sidebar-right"
     "sidebar-left main sidebar-right";
-
-  height: 100vh;
 }
 
 .container-main {
   grid-area: main;
+  padding: 0 1rem;
 }

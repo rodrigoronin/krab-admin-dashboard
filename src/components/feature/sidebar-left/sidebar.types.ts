@@ -4,4 +4,5 @@ export type NavItemType = {
   label: string;
   path: string;
   icon?: IconType;
+  indent?: boolean;
 };

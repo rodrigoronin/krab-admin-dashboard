@@ -13,9 +13,11 @@ const NavItem = ({ item }: NavItemProps) => {
   return (
     <NavLink
       to={item.path}
-      end
+      end={item.path === "/"}
       className={({ isActive }) =>
-        `${style["link-title"]} ${isActive ? style["link-title_active"] : ""} `
+        `${style["link-title"]} ${item.indent ? style["link-title_indent"] : ""} ${
+          isActive ? style["link-title_active"] : ""
+        }`
       }
     >
       <div className={style.link}>
