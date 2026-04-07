@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import type { NavItemType } from "./sidebar.types";
 
-import style from "@styles/NavItem.module.css";
+import style from "./NavItem.module.css";
 
 type NavItemProps = {
   item: NavItemType;

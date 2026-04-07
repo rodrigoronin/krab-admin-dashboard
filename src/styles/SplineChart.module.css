@@ -1,9 +1,3 @@
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
 
 .tabs {
   display: flex;
@@ -23,5 +17,5 @@
 }
 
 .card {
-  background-color: #fff;
+  max-height: 330px;
 }
